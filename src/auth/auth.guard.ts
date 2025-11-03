@@ -6,9 +6,10 @@ import {
 } from '@nestjs/common';
 import { Request } from 'express';
 import { AuthService } from './auth.service';
+import { User } from '@supabase/supabase-js';
 
 interface AuthenticatedRequest extends Request {
-  user?: any;
+  user?: User;
 }
 
 @Injectable()
